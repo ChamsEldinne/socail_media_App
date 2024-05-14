@@ -1,0 +1,134 @@
+.overaly{
+    display: flex;
+    width: 98.9vw;
+    height: 100vh;
+    z-index:10000 ;
+    background-color: rgba(0, 0, 0, 0.342);
+    position: fixed;
+    justify-content: center;
+    align-items: center;
+}
+.overaly .content{
+    display: flex;
+    flex-direction: row;
+    gap: 0;
+    width: 90%;
+    height: 90%;
+    border-radius: 20px;
+    position: relative;
+}
+.overaly .content .imgs{
+    width: 70%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overaly .content .imgs img{
+    width: 100%;
+    height: 100%;
+}
+.overaly .content .left{
+    width:30%;
+    height: 100%;
+    background-color: white;
+}
+.overaly .content .left .content{
+    display: flex;
+    flex-direction: column;
+    padding: 15px;
+    gap: 30px;
+    height: 100%;
+    width: 100%;
+}
+.overaly .content .left .content .box{
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    font-size: 15px;
+    font-weight: 600;
+    gap: 10px;
+}
+.overaly .content .left .content .box .img{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    border: 3px solid var(--main-color);
+}
+.overaly .content .left .content .box .img img{
+   width: 100%;
+   height: 100% ;
+   border-radius: 50%;
+}
+.overaly .content .left .text{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.432);
+    padding-bottom: 30px;
+    height: fit-content;
+    width: 100%;
+}
+
+.overaly .content .left .comnatairs{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 25px;
+    overflow-y: scroll;
+}
+.overaly .content .left .comnatairs .commentBox{
+    display: flex;
+    width: 100%;
+    height: fit-content;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+}
+.overaly .content .left .comnatairs .commentBox .img{
+    width: 40px;
+    height: 40px;
+    overflow: hidden;
+    border-radius: 50%;
+    border: 3px solid var(--main-color);
+}
+
+.overaly .content .left .comnatairs .commentBox .img img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%
+}
+.overaly .content .left .comnatairs .commentBox .comment{
+   display: flex;
+   flex-direction: column;
+   background-color: #e6d6d68f;
+   padding: 10px;
+   gap: 10px;
+   border-radius: 20px;
+   width: fit-content;
+   height: fit-content;
+}
+
+.overaly .content .left .comnatairs .commentBox .comment .name{
+    font-size: 15px;
+    font-weight: 700;
+}
+.overaly .close {
+    font-size: 20px;
+    font-weight: 700;
+    position: absolute;
+    right: 10px;
+    top: 10px;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+    z-index: 10;
+    background-color: #f5e5e58f;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overaly .close:hover{
+  background-color: #e6d6d68f;
+}

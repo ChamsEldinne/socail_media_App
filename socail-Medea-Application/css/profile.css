@@ -1,0 +1,602 @@
+:root{
+    --main-color:#0866FF;
+    --main-box-shadow:0 0 10px rgba(0, 0, 0, 0.19);
+}
+body{
+    background-color: #f0f2f5;
+}
+*{
+    margin: 0;
+    padding: 0 ;
+    box-sizing: border-box;
+    font-family: sans-serif;
+    text-transform:capitalize ;
+}
+.container{
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left: auto;
+    margin-right: auto;
+}
+header{
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.281);
+    position:sticky;
+    top: 0;
+    z-index: 100;
+    background-color: white;
+}
+header .container{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 60px;
+}
+header .container .left{
+    display: flex;
+    gap: 10px;
+    width: 27%;
+    justify-content: center;
+    align-items: center;
+    height: 75px;
+}
+header .container .searchBox{
+    position: relative;
+    
+}
+header .container .searchBox .fa-magnifying-glass{
+    position: absolute;
+    top: 20px;
+    left: 5px;
+    font-size: 15px;
+    transform: translateY(-50%);
+    color: rgba(0, 0, 0, 0.658);
+}
+
+header .container .searchBox input{
+    height: 40px;
+    border-radius: 25px;
+    border: none;
+    padding-inline-start: 25px;
+    background-color: #E4E6EB;
+}
+
+.logo{
+    font-size: 25px;
+    font-weight: 900;
+    color: var(--main-color);
+    cursor: pointer;
+}
+header .container .midle{
+    display: flex;
+    justify-content: center;
+    width: 40%;
+    align-items: center;
+    height: 100%;
+}
+header .container .midle .box{
+   font-size: 22px;
+   color: var(--main-color);
+
+   width: 25%;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: relative;
+   cursor: pointer;
+   height: 100%;
+   overflow: hidden;
+}
+header .container .midle .box::before{
+    content: "";
+    position: absolute;
+    bottom: 0px;
+    left: -100%;
+    display: block;
+    width: 100%;
+    height: 3px;
+    background-color:  var(--main-color);
+    transition: 0.3s;
+}
+header .container .midle .box:hover{
+ opacity: 0.8;
+}
+header .container .midle .box:hover::before{
+ left: 0;
+}
+header .container .right{
+    display: flex;
+    gap: 5px;
+    justify-content: flex-end;
+    align-items: center;
+    width: 25%;
+    height: 100%;
+}
+header .container .right .box{
+   background-color: #E4E6EB;
+   width:40px ;
+   height: 40px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   border-radius: 50%;
+   cursor: pointer;
+    font-size: 19px;
+}
+section{
+    width: 98.7vw;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+}
+
+section .header{
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    justify-content: center;
+    background:linear-gradient(-180deg ,rgba(0, 0, 0, 0.658) ,white,white) ;
+    box-shadow: var(--main-box-shadow);
+}
+
+.header  .cover{
+  width: 70%;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  background-color: white;
+  border-radius: 10px;
+}
+.header  .cover .imgCover{
+    width: 100%;
+    height: 360px;
+    position: relative;
+
+}
+.header  .cover .imgCover img{
+    width: 100%;
+    height: 100%;
+    cursor: pointer;
+}
+.header  .cover .imgCover .editCover{
+   width: fit-content;
+   height: 30px;
+   background-color: white;
+   border: none;
+   border-radius: 5px;
+   font-size: 19px;
+   font-weight: 600;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   position: absolute;
+   z-index: 10;
+   bottom: 10px;
+   right: 10px;
+   padding-left: 10px ;
+   padding-right: 10px;
+   cursor: pointer;
+} 
+
+.header  .cover .coverHeader{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  width:calc( 100% -40px) ;
+  align-items: flex-end;
+  height: fit-content;
+  padding: 20px;
+  margin-left: 20px;
+  margin-right: 20px;
+  border-bottom: 1px solid rgba(0, 0, 0, 0.548);
+  margin-top: -50px;
+  z-index: 3;
+}
+
+.header  .cover .coverHeader .profileBox{
+    width: fit-content ;
+    height: fit-content;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    font-size: 32px;
+    font-weight: 700;
+    cursor: pointer;
+}
+
+.header  .cover .coverHeader .profileBox .profileImg{
+    width: 160px;
+    height: 160px;
+    border: 4px solid var(--main-color);
+    border-radius: 50%;
+}
+
+.header  .cover .coverHeader .profileBox .nbfreind{
+    font-size: 25px;
+    opacity: 0.6;
+}
+.header  .cover .coverHeader .profileBox .profileImg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.header  .cover .coverHeader .editBox{
+    display: flex;
+    justify-content: flex-start;
+    gap: 10px;
+}
+.header  .cover .coverHeader .editBox div{
+    width: fit-content;
+    height: 35px;
+    border: none;
+    border-radius: 8px;
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #E4E6EB;
+    padding-left: 10px;
+    padding-right: 10px;
+    cursor: pointer;
+}
+.header  .cover .coverHeader .editBox .addToYourStory{
+    background-color: var(--main-color);
+    color: white;
+}
+.header  .cover .coverFooter{
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding-left: 20px;
+}
+
+.header  .cover .coverFooter ul{
+    display: flex;
+    align-items: center;
+    list-style: none;
+    gap: 10px;
+    width: fit-content;
+    height: 100%;
+    padding-top: 10px;
+}
+.header  .cover .coverFooter ul li{
+    width: fit-content;
+    height: 100%;
+    font-size: 15px;
+    font-weight: 700;
+    color: rgba(0, 0, 0, 0.753);
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    position: relative;
+    overflow: hidden;
+    transition: 0.3s;
+    border-radius: 5px;
+}
+
+.header  .cover .coverFooter ul li:hover{
+    background-color: #E4E6EB;
+}
+.header  .cover .coverFooter ul li::before{
+    content: "";
+    width: 100%;
+    height: 3px;
+    background-color: var(--main-color);
+    position: absolute;
+    left: -100%;
+    bottom: 0 ;
+    transition: 0.3s;
+
+}
+
+.header  .cover .coverFooter ul li:hover::before{
+    left: 0px;
+}
+
+.profileContent{
+    width: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.profileContent .container{
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    justify-content: center; 
+}
+
+.threePoint{
+    width: 40px;
+    height: 40px;
+    display: flex;
+    gap: 1px;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.threePoint *{
+    width: 5px;
+    height: 5px;
+    background-color: black;
+    display: block;
+    border-radius: 50%;
+}
+section .container .content{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 55%;
+    height: fit-content;
+    gap: 20px;
+}
+
+section .content .newPost{
+    display: flex;
+    width: 100%;
+    height: 110px;
+    flex-direction: column;
+    padding:10px ;
+    background-color: white;
+    border-radius: 5px;
+    box-shadow: var(--main-box-shadow);
+}
+section .content .newPost .header{
+    display: flex;
+    gap: 10px;
+    padding-bottom: 10px;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.37);
+    background: white;
+    box-shadow: none;
+
+}
+section .content .newPost .header .box{
+    background-color: #E4E6EB;
+    width:40px ;
+    height: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+     font-size: 19px;
+}
+section .content .newPost .header input{
+    padding: 15px;
+    border-radius: 15px;
+    background-color:#f5e5e58f ;
+    width: 80%;
+    border: none;
+}
+section .content .newPost .footer{
+    display: flex;
+    justify-content: center;
+    padding-top: 15px;
+}
+section .content .newPost .footer .box{
+    display: flex;
+    gap: 5px;
+    width:31% ;
+    justify-content: center;
+    align-items: center;
+}
+section .content .newPost .footer .box i{
+    font-size:25px ;
+}
+.content .posts{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+}
+.content .posts .post{
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    box-shadow:var(--main-box-shadow) ;
+    width: 100%;
+    border-radius: 10px;
+}
+.content .posts .post .header{
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+    width: 100%;
+    background: white;
+    box-shadow: none;
+}
+.content .posts .post .header .right{
+    display: flex;
+    width: 80px;
+    justify-content: center;
+    align-items: center;
+}
+.content .posts .post .header .left{
+    display: flex;
+    gap: 5px;
+    justify-content: center;
+    align-items: center;
+}
+.content .posts .post .header .left .photoProfile {
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    border: 3px solid var(--main-color);
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+.content .posts .post .header .left .photoProfile img{
+    width: 90%;
+    height: 90%;
+    border-radius: 50%;
+}
+.content .posts .post .header .left .name{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+.content .posts .post .header .left h4{
+  cursor: pointer;
+}
+.content .posts .post .header .right .X{
+    display: flex;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+}
+
+
+.content .posts .post .body{
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    gap: 20px;
+    overflow: hidden;
+    height: fit-content;
+    margin-bottom: 30px;
+}
+.content .posts .post .body p{
+    padding: 6px;
+}
+.content .posts .post .body .imgs {
+  width: 100%;
+  cursor: pointer;
+}
+
+.content .posts .post .body .imgs img{
+    width: 100%;
+}
+.content .posts .post .footer{
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    padding:10px ;
+    font-size: 16px;
+    color: rgba(0, 0, 0, 0.822);
+    border-top: 1px solid rgba(0, 0, 0, 0.37);
+    margin-left: 10px;
+    margin-right: 10px;
+}
+.content .posts .post .footer .box{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
+    cursor: pointer;
+}
+section .profileContent .container .rightContainer{ 
+    width: 40%;
+    overflow: hidden;
+    height: fit-content;
+    display: grid;
+    gap: 10px;
+    position: sticky;
+    top:  -420px;
+}
+section .profileContent .container .rightContainer .picteurs{
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    background-color: white;
+    padding:10px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    box-shadow: var(--main-box-shadow);
+    border-radius: 6px;
+
+}
+section .profileContent .container .rightContainer .picteurs .title{
+  font-size: 19px;
+  font-weight: 600;
+  opacity: 0.7;
+}
+
+section .profileContent .container .rightContainer .picteurs .picteursContainer{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+section .profileContent .container .rightContainer .picteurs .picteursContainer .imgbox{
+    width: 30%;
+    height: 123px;
+}
+
+section .profileContent .container .rightContainer .picteurs .picteursContainer .imgbox img{
+    width: 100%;
+    height: 100%;
+}
+
+ .freinds{
+    width: 100%;
+    height: 450px;
+    overflow: hidden;
+    background-color: white;
+    padding:10px ;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    gap: 10px;
+    box-shadow: var(--main-box-shadow);
+    border-radius: 6px;
+    overflow: hidden;
+}
+
+.freinds .title{
+    font-size: 19px;
+    font-weight: 600;
+    opacity: 0.7;
+}
+
+ .freinds .friendContainer{
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 10px;
+    width: 100%;
+    height: 90%;
+    overflow: hidden;
+}
+
+ .freinds .friendBox{
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  width: 30%;
+  height: 123px;
+}
+ .freinds .friendBox .profileimg{
+    width: 100%;
+    height: 80%;
+    border-radius: 8px;
+}
+
+.freinds .friendBox .profileimg img{
+    width: 100%;
+    height: 100%;
+    border-radius: 8px;
+}
+
+.freinds .friendBox .name{
+    font-size: 15px;
+    font-weight: 700;
+    opacity: 0.8;
+}
